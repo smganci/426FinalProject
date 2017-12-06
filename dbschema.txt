@@ -25,3 +25,4 @@ Task
     project_id INT
     description TEXT
     due_date DATE
+    color VARCHAR(20)
