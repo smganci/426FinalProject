@@ -1,15 +1,7 @@
-<!--final.html-->
-<!DOCTYPE html>
+<?php 
+include_once "header.php";
+?>
 
-<html lang="en">
-
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="final.css" />
-
-</head>
-
-<body>
     <ul class="navigationContainer">
         <li class='navButton'><button id="homeNav">ComRad</a></li>
         <li class='navButton'><button id="taskNav">My Tasks</li>
@@ -17,25 +9,16 @@
         <li class='navButton'><button id="groupsNav">My Groups</li>
     </ul>
 
+    <?php
+                if(isset($_SESSION['username'])){
+                    echo "<h1> Welcome, ".$_SESSION['first_name']."</h1>";
+                }
+     ?>
+
     <h2 id='subtitle'>Delegate tasks and keep your group members accountable!</h2>
 
     <div class="widgetBoard">
     <!--WIDGETS-->
-        <div class:"widget" id="loginWidget" >
-            <table>
-                <tr>
-                    <td>Username/Email:</td>
-                    <td><input type:"text" name="usernameField"><td>
-                </tr>
-                <tr>
-                    <td>Password:</td>
-                    <td><input type:"text" name="passwordField"><td>
-                </tr>
-                <tr>
-                    <td><button>Login</td>
-            </table>
-        </div>
-
         <div id="groupsWidget">
             <table>
                 <tr>
@@ -72,6 +55,7 @@
     </div>
 
 
-</body>
+<?php
+    include_once "footer.php";
 
-</html>
+?>
