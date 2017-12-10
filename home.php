@@ -19,11 +19,41 @@ include_once "header.php";
 
     <div class="widgetBoard">
     <!--WIDGETS-->
-        <div id="groupsWidget">
+        <div id="projectsWidget">
+            <div class="widgetHeader" id="createProject">
+                <!-- new code below -->
+                <form action="includes/createProject.php" method="POST"> 
+
+                   Project Name: <input type="text" name="project_name" placeholder="project name"> 
+                   <br/>
+                   Project Password: <input type="text" name="project_password" placeholder="project password">
+                   <br/>
+                   Project Description: <input type="text" name="project_description" placeholder="description">
+                   <br/>
+                    <button type="submit" name="submit">Create Project</button>       
+                    <br/>           
+                </form>
+
+                <form action="includes/joinProject.php" method="POST"> 
+
+                   Project Name: <input type="text" name="project_name" placeholder="project name"> 
+                   <br/>
+                   Project Password: <input type="text" name="project_password" placeholder="project password">
+                   <br/>
+                    <button type="submit" name="submit">Join Project</button>       
+                    <br/>           
+                </form>
+
+                
+
+
+            </div>
+
             <table>
                 <tr>
                     <td>My Groups:</td>
                 </tr>
+                
                 <tr>
                     <td>Group 1 goes here</td>
                 </tr>
